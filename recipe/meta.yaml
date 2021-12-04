@@ -1,5 +1,5 @@
 {% set name = "PyFstat" %}
-{% set version = "1.11.6" %}
+{% set version = "1.12.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,21 +7,21 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 158b7b68e11ffedc68a7eebb7609fc4d1be3263d9bb73d03f323b1f5378fe082
+  sha256: 8ffbfdcf324b19896896dfef445210f9dd4ddd677f203208c841edec386bbf7f
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
   run:
-    - python >=3.6
-    - numpy 
+    - python >=3.7
+    - numpy
     - matplotlib-base >=2.1
     - scipy
     - ptemcee
@@ -32,8 +32,8 @@ requirements:
     - peakutils
     - pathos
     - python-lal >=7.1.0
-    - python-lalpulsar >=2.1.0
-    - lalapps >=7.0.0
+    - python-lalpulsar >=3.1.0
+    - lalapps >=7.3.0
 
 test:
   requires:
