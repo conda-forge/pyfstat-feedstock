@@ -17,10 +17,10 @@ build:
 requirements:
   build:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
   run:
-    - python >=3.6
+    - python >=3.7
     - numpy
     - matplotlib-base >=2.1
     - scipy
@@ -32,8 +32,8 @@ requirements:
     - peakutils
     - pathos
     - python-lal >=7.1.0
-    - python-lalpulsar >=2.1.0
-    - lalapps >=7.0.0
+    - python-lalpulsar >=3.1.0
+    - lalapps >=7.3.0
 
 test:
   requires:
