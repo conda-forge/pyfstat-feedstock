@@ -1,5 +1,5 @@
 {% set name = "PyFstat" %}
-{% set version = "1.13.0" %}
+{% set version = "1.13.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 12ba4cc75bad329947bd3757085dd79378922418465aa3c66f69a663b535846f
+  sha256: 763eb0852676c0ae0a873f254c51380bbdb8040fbb870bfb404aa890631583ed
 
 build:
   noarch: python
