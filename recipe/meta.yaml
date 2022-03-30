@@ -1,5 +1,5 @@
 {% set name = "PyFstat" %}
-{% set version = "1.13.1" %}
+{% set version = "1.14.0rc1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 763eb0852676c0ae0a873f254c51380bbdb8040fbb870bfb404aa890631583ed
+  sha256: 7d9bcd6aa9b53a035f91e26b6a2bf6d0d6b6152b183aa45643ae407b374a2917
 
 build:
   noarch: python
@@ -34,16 +34,18 @@ requirements:
     - python-lal >=7.1.5
     - python-lalpulsar >=3.1.1
     - lalapps >=7.4.0
+    - attrs
 
 test:
   requires:
     - pytest
+    - flaky
   imports:
     - pyfstat
   source_files:
-    - tests.py
+    - tests/*.py
   commands:
-    - python -m pytest tests.py
+    - python -m pytest tests/
 
 about:
   home: https://github.com/PyFstat/PyFstat/
