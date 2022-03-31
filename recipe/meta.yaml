@@ -39,6 +39,7 @@ requirements:
 test:
   requires:
     - pytest
+    - flaky
   imports:
     - pyfstat
   source_files:
