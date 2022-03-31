@@ -34,6 +34,7 @@ requirements:
     - python-lal >=7.1.5
     - python-lalpulsar >=3.1.1
     - lalapps >=7.4.0
+    - attrs
 
 test:
   requires:
@@ -41,9 +42,9 @@ test:
   imports:
     - pyfstat
   source_files:
-    - tests.py
+    - tests/*.py
   commands:
-    - python -m pytest tests.py
+    - python -m pytest tests/
 
 about:
   home: https://github.com/PyFstat/PyFstat/
