@@ -17,10 +17,10 @@ build:
 requirements:
   build:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
   run:
-    - python >=3.7
+    - python >=3.8
     - numpy
     - matplotlib-base >=2.1
     - scipy
@@ -28,12 +28,11 @@ requirements:
     - corner
     - dill
     - tqdm
-    - bashplotlib
     - peakutils
     - pathos
     - python-lal >=7.1.5
-    - python-lalpulsar >=3.1.1
-    - lalapps >=7.4.0
+    - python-lalpulsar >=5.0.0
+    - lalpulsar >=5.0.0
     - attrs
 
 test:
