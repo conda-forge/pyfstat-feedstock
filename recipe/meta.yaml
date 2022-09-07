@@ -28,7 +28,6 @@ requirements:
     - corner
     - dill
     - tqdm
-    - peakutils
     - pathos
     - python-lal >=7.1.5
     - python-lalpulsar >=5.0.0
