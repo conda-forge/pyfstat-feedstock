@@ -1,5 +1,5 @@
 {% set name = "PyFstat" %}
-{% set version = "1.19.0" %}
+{% set version = "1.19.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e7aa883d4986984dd7588aa17dc66ffce5b857670133eae722a26eb24278acd9
+  sha256: 7a9069c837664e9ec3d81ab3edebaf3d3e9cd96f2fcf5984dbd720f2f052e52e
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python >=3.8
-    - numpy
+    - numpy <1.24.0
     - matplotlib-base >=2.1
     - scipy
     - ptemcee
