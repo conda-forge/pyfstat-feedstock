@@ -1,11 +1,11 @@
-About pyfstat
-=============
+About pyfstat-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyfstat-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/PyFstat/PyFstat/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyfstat-feedstock/blob/main/LICENSE.txt)
 
 Summary: a python package for gravitational wave analysis with the F-statistic
 
