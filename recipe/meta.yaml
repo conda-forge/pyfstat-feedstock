@@ -30,8 +30,8 @@ requirements:
     - tqdm
     - pathos
     - python-lal >=7.1.5
-    - python-lalpulsar >=5.0.0,<6.0.0
-    - lalpulsar >=5.0.0,<6.0.0
+    - python-lalpulsar >=6.0
+    - lalpulsar >=6.0
     - attrs
 
 test:
