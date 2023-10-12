@@ -1,5 +1,5 @@
 {% set name = "PyFstat" %}
-{% set version = "2.0.0" %}
+{% set version = "2.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cd2a02cc6618c238d2aa8e3559e2e9f4a94302a53cad03285f1e09438c7a6fca
+  sha256: fe11d7a843ce84e7b5b1890daec851e2e5eb3e401c866e9aea98277a7f916789
 
 build:
   noarch: python
@@ -17,12 +17,12 @@ build:
 requirements:
   build:
   host:
-    - python >=3.8
+    - python >=3.8,<3.12
     - pip
   run:
-    - python >=3.8
+    - python >=3.8,<3.12
     - numpy <1.24.0
-    - matplotlib-base >=2.1
+    - matplotlib-base >=3.3
     - scipy
     - ptemcee
     - corner
