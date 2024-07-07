@@ -17,10 +17,10 @@ build:
 requirements:
   build:
   host:
-    - python >=3.9,<3.12
+    - python >=3.9,<=3.12
     - pip
   run:
-    - python >=3.9,<3.12
+    - python >=3.9,<=3.12
     - numpy <2.0
     - matplotlib-base >=3.3
     - scipy
