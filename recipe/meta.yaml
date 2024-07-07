@@ -1,5 +1,5 @@
 {% set name = "PyFstat" %}
-{% set version = "2.0.2" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fe11d7a843ce84e7b5b1890daec851e2e5eb3e401c866e9aea98277a7f916789
+  sha256: 297ad5ddaa9ea2f581b29a6e9d557a78619a13146371870323ac1352f1f75181
 
 build:
   noarch: python
@@ -17,11 +17,11 @@ build:
 requirements:
   build:
   host:
-    - python >=3.8,<3.12
+    - python >=3.9,<=3.12
     - pip
   run:
-    - python >=3.8,<3.12
-    - numpy <1.24.0
+    - python >=3.9,<=3.12
+    - numpy <2.0
     - matplotlib-base >=3.3
     - scipy
     - ptemcee
@@ -36,7 +36,7 @@ requirements:
 
 test:
   requires:
-    - pytest
+    - pytest<8.2.2
     - flaky
   imports:
     - pyfstat
