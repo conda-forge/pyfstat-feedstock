@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 297ad5ddaa9ea2f581b29a6e9d557a78619a13146371870323ac1352f1f75181
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
   host:
-    - python >=3.9,<=3.12
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.9,<=3.12
+    - python >={{ python_min }},<3.13a0
     - numpy <2.0
     - matplotlib-base >=3.3
     - scipy
@@ -38,6 +38,7 @@ test:
   requires:
     - pytest<8.2.2
     - flaky
+    - python {{ python_min }}
   imports:
     - pyfstat
   source_files:
