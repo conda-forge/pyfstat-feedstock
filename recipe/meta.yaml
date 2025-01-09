@@ -17,11 +17,11 @@ build:
 requirements:
   build:
   host:
-    - python {{ python_min }},<=3.12
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >={{ python_min }},<=3.12
+    - python >={{ python_min }},<3.13a0
     - numpy <2.0
     - matplotlib-base >=3.3
     - scipy
