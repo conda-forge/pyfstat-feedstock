@@ -21,19 +21,20 @@ requirements:
     - pip
     - setuptools
   run:
-    - python >={{ python_min }},<3.13a0
-    - numpy <2.0
-    - matplotlib-base >=3.3
-    - scipy
-    - ptemcee
+    - attrs
     - corner
     - dill
-    - tqdm
+    - lalpulsar >=6.0
+    - matplotlib-base >=3.3
+    - numpy <2.0
+    - pandas
     - pathos
+    - ptemcee
+    - python >={{ python_min }},<3.13a0
     - python-lal >=7.1.5
     - python-lalpulsar >=6.0
-    - lalpulsar >=6.0
-    - attrs
+    - scipy
+    - tqdm
 
 test:
   requires:
