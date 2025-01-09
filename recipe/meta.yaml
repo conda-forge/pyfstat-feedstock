@@ -1,5 +1,5 @@
 {% set name = "PyFstat" %}
-{% set version = "2.1.0" %}
+{% set version = "2.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,33 +7,34 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 297ad5ddaa9ea2f581b29a6e9d557a78619a13146371870323ac1352f1f75181
+  sha256: 4d0e8e6daa3e9360907cece149ec4dcca006b52977abb95df27b2a86b8a8c73a
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
   host:
-    - python {{ python_min }},<=3.12
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >={{ python_min }},<=3.12
-    - numpy <2.0
-    - matplotlib-base >=3.3
-    - scipy
-    - ptemcee
+    - attrs
     - corner
     - dill
-    - tqdm
+    - lalpulsar >=6.0
+    - matplotlib-base >=3.3
+    - numpy <2.0
+    - pandas
     - pathos
+    - ptemcee
+    - python >={{ python_min }},<3.13a0
     - python-lal >=7.1.5
     - python-lalpulsar >=6.0
-    - lalpulsar >=6.0
-    - attrs
+    - scipy
+    - tqdm
 
 test:
   requires:
