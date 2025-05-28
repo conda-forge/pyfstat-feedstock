@@ -26,11 +26,11 @@ requirements:
     - dill
     - lalpulsar >=6.0
     - matplotlib-base >=3.3
-    - numpy <2.0
+    - numpy
     - pandas
     - pathos
     - ptemcee
-    - python >={{ python_min }},<3.13a0
+    - python >={{ python_min }},<3.14a0
     - python-lal >=7.1.5
     - python-lalpulsar >=6.0
     - scipy
@@ -38,7 +38,7 @@ requirements:
 
 test:
   requires:
-    - pytest<8.2.2
+    - pytest <8.2.2
     - flaky
     - python {{ python_min }}
   imports:
