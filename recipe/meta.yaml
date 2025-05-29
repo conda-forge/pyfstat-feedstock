@@ -1,13 +1,13 @@
 {% set name = "PyFstat" %}
-{% set version = "2.2.1" %}
+{% set version = "2.3.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 402acae2e9c76060d7e50ce97ba9c47a0e996bb3961c74efbe5c298605fb4dff
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | lower }}-{{ version }}.tar.gz
+  sha256: d6aa0f9cc17606f907b5e4a39165e99828d608c0bccbbf2b102b7c1d6a47c2cb
 
 build:
   noarch: python
@@ -26,11 +26,11 @@ requirements:
     - dill
     - lalpulsar >=6.0
     - matplotlib-base >=3.3
-    - numpy <2.0
+    - numpy
     - pandas
     - pathos
     - ptemcee
-    - python >={{ python_min }},<3.13a0
+    - python >={{ python_min }},<3.14a0
     - python-lal >=7.1.5
     - python-lalpulsar >=6.0
     - scipy
@@ -38,7 +38,7 @@ requirements:
 
 test:
   requires:
-    - pytest<8.2.2
+    - pytest <8.2.2
     - flaky
     - python {{ python_min }}
   imports:
